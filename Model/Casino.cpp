@@ -194,3 +194,14 @@ void Casino::reglas(int idJuego) {
             cout << "Juego inválido. Seleccione entre 1 y " << juegosDisponibles.size() << "." << endl;
     }
 }
+
+void Casino::mostrarTodosJugadores() const {
+    cout << "=== Jugadores registrados ===\n";
+    for (auto &par : jugadoresMap) {
+        Jugador *j = par.second;
+        cout << "ID: " << j->getId()
+             << " | Nombre: " << j->getNombre()
+             << " | Gonzos: " << j->getCantGonzos() << "\n";
+    }
+}
+

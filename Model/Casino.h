@@ -54,6 +54,8 @@ public:
 
     void reglas(int idJuego);
 
+    void mostrarTodosJugadores() const;
+
 };
 
 #endif //CASINO_CASINO_H
