@@ -54,6 +54,6 @@ void Mayor13::mostrarReglas() const {
     cout << "4) Si tu número es menor o igual al número del casino, pierdes todo lo apostado." << endl;
 }
 
-string Mayor13::nombreJuego() const override {
+string Mayor13::nombreJuego() const {
     return "Mayor de 13";
 }

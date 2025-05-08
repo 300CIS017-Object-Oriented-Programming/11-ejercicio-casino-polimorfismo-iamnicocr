@@ -63,7 +63,7 @@ void DosColores::mostrarReglas() const {
          << "6) Si no coincide nada → pierdes apuesta.\n";
 }
 
-string DosColores::nombreJuego() const override {
+string DosColores::nombreJuego() const {
     return "Dos Colores";
 }
 

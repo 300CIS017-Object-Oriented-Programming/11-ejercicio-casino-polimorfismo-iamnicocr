@@ -42,6 +42,6 @@ void Slots::mostrarReglas() const {
     cout << "5) Si no se cumple ninguna de las anteriores, pierdes lo apostado." << endl;
 }
 
-string Slots::nombreJuego() const override {
+string Slots::nombreJuego() const {
     return "Dos Colores";
 }
