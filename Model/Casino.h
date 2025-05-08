@@ -13,6 +13,7 @@
 #include "Mayor13.h"
 #include "DosColores.h"
 #include "Slots.h"
+#include "PiedraPapelTijera.h"
 
 
 using std::cin;

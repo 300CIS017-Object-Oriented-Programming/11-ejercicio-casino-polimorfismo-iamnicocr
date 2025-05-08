@@ -21,6 +21,8 @@ protected:
 public:
     float jugar(float gonzosApostar) override;
 
+    void mostrarReglas() const override;
+
     ~DosColores() override = default; // Hace que se defina un constuctor por defecto
 
 };

@@ -44,3 +44,12 @@ float Mayor13::calcularResultado(float gonzosApostar) {
         return lowestResult;
     }
 }
+void Mayor13::mostrarReglas() const {
+    cout << "=== Reglas de Mayor13 ===" << endl;
+    cout << "1) El sistema genera un número aleatorio entre 1 y 13 para ti." << endl;
+    cout << "2) Tienes dos opciones:" << endl;
+    cout << "   a) Rendirte: antes de que salga el número del casino, pierdes la mitad de lo apostado." << endl;
+    cout << "   b) Jugar: se genera el número aleatorio del casino (1–13) y continúa la ronda." << endl;
+    cout << "3) Si tu número es mayor que el número del casino, ganas el doble de lo apostado." << endl;
+    cout << "4) Si tu número es menor o igual al número del casino, pierdes todo lo apostado." << endl;
+}
