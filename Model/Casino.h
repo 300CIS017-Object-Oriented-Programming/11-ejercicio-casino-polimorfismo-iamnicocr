@@ -56,6 +56,7 @@ public:
 
     void mostrarTodosJugadores() const;
 
+    void mostrarTodosJuegos() const ;
 };
 
 #endif //CASINO_CASINO_H

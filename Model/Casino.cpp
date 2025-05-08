@@ -205,3 +205,10 @@ void Casino::mostrarTodosJugadores() const {
     }
 }
 
+void Casino::mostrarTodosJuegos() const {
+    cout << "=== Juegos disponibles ===\n";
+    for (size_t i = 0; i < juegosDisponibles.size(); ++i) {
+        cout << (i+1) << ". "
+             << juegosDisponibles[i]->nombreJuego() << "\n";
+    }
+}
