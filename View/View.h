@@ -26,6 +26,8 @@ private:
 
     void recargarGonzos();
 
+    void mostrarReglas();
+
 public:
     View() = default; // Escribe un constructor por defecto
     void verPrincipal();

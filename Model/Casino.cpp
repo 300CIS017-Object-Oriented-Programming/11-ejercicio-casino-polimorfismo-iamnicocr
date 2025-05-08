@@ -175,3 +175,22 @@ Casino::~Casino() {
     }
     cout << "Termine de llamar destructor de casino \n";
 }
+
+void Casino::reglas(int idJuego) {
+    switch (idJuego) {
+        case 1:
+            juegosDisponibles[0]->mostrarReglas();
+            break;
+        case 2:
+            juegosDisponibles[1]->mostrarReglas();
+            break;
+        case 3:
+            juegosDisponibles[2]->mostrarReglas();
+            break;
+        case 4:
+            juegosDisponibles[3]->mostrarReglas();
+            break;
+        default:
+            cout << "Juego inválido. Seleccione entre 1 y " << juegosDisponibles.size() << "." << endl;
+    }
+}

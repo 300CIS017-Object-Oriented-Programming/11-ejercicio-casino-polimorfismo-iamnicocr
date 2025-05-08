@@ -52,6 +52,8 @@ public:
 
     void recargarGonzos(long idJugador);
 
+    void reglas(int idJuego);
+
 };
 
 #endif //CASINO_CASINO_H
