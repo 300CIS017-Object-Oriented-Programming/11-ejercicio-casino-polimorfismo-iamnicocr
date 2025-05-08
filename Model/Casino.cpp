@@ -109,7 +109,7 @@ bool Casino::verPuedeContinuar(int idJugador, float gonzosApostar) {
         throw std::domain_error("El jugador con la identificacion recibida NO existe");
     }
     Jugador *pJugador = jugadoresMap[idJugador];
-    if (pJugador->getCantGonzos() < gonzosApostar) {
+    if (pJugador->getCantGonzos() < 2 * gonzosApostar) {
         return false;
     }
     return true;
