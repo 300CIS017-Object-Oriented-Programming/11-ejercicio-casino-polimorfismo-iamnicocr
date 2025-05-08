@@ -41,3 +41,7 @@ float PiedraPapelTijera::calcularResultado(float gonzosApostar) {
     return 0;  // Derrota
 }
 
+string PiedraPapelTijera::nombreJuego() const {
+    return "Piedra, papel o tijera";
+}
+

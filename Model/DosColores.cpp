@@ -63,6 +63,10 @@ void DosColores::mostrarReglas() const {
          << "6) Si no coincide nada → pierdes apuesta.\n";
 }
 
+string DosColores::nombreJuego() const override {
+    return "Dos Colores";
+}
+
 /* Como el constructor se definio por defecto no hay que poner constructo vacio
 DosColores::~DosColores() {
 

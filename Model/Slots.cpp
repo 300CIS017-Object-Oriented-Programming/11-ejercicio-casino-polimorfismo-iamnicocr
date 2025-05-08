@@ -41,3 +41,7 @@ void Slots::mostrarReglas() const {
     cout << "4) Si los tres son 7, ganas 7 veces lo apostado." << endl;
     cout << "5) Si no se cumple ninguna de las anteriores, pierdes lo apostado." << endl;
 }
+
+string Slots::nombreJuego() const override {
+    return "Dos Colores";
+}

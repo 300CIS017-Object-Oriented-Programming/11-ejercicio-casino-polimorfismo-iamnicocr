@@ -23,6 +23,8 @@ public:
 
     void mostrarReglas() const override;
 
+    string nombreJuego() const override;
+
     ~DosColores() override = default; // Hace que se defina un constuctor por defecto
 
 };
