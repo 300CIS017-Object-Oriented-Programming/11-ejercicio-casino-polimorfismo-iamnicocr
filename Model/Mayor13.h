@@ -10,6 +10,8 @@
 #include<cstdlib>
 #include<ctime>
 
+
+
 class Mayor13 : public Juego {
 
 protected:
@@ -18,6 +20,8 @@ protected:
 public:
     ~Mayor13() override = default; // Los destructores deben ser sobreescritos y deben ser virtual en la clase papa. Si no tiene nada especial se puede marcar como default
     float jugar(float gonzosApostar) override;
+    void mostrarReglas() const override;
+    string nombreJuego() const override;
 
 };
 

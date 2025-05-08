@@ -13,6 +13,7 @@
 #include "Mayor13.h"
 #include "DosColores.h"
 #include "Slots.h"
+#include "PiedraPapelTijera.h"
 
 
 using std::cin;
@@ -51,6 +52,11 @@ public:
 
     void recargarGonzos(long idJugador);
 
+    void reglas(int idJuego);
+
+    void mostrarTodosJugadores() const;
+
+    void mostrarTodosJuegos() const ;
 };
 
 #endif //CASINO_CASINO_H

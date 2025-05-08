@@ -37,14 +37,17 @@ void View::jugarView() {
         cout << "1. Mayor a 13." << endl;
         cout << "2. Dos colores." << endl;
         cout << "3. Slots" << endl;
+        cout << "4. Piedra, papel o tijera" << endl;
         cout << "Opcion: ";
         cin >> idJuego;
         std::string textoResultado;
         gonzosResultado = casino.jugar(idJuego, idJugador, cantGonzos);
         if (gonzosResultado > 0) {
             textoResultado = "Haz ganado!: ";
-        } else {
+        } else if (gonzosResultado < 0) {
             textoResultado = "Haz perdido :(!: ";
+        } else {
+            textoResultado = "Empate! No pierdes nada:  ";
         }
         cout << textoResultado << gonzosResultado << " Gonzos" << endl;
 
@@ -62,6 +65,7 @@ int View::mostrarMenu() {
     cout << "3. Consultar jugador  " << std::endl;
     cout << "4. Recargar gonzos " << std::endl;
     cout << "5. Retirar jugador casino " << std::endl;
+    cout << "6. Reglas\n";
     cout << "0. Salir\n"
          << std::endl;
     cout << "Digita el numero: ";
@@ -89,6 +93,9 @@ void View::verPrincipal() {
             case 5:
                 retirarJugador();
                 break;
+            case 6:
+                mostrarReglas();
+            break;
             case 0:
                 cout << "Hasta pronto !";
                 break;
@@ -96,6 +103,18 @@ void View::verPrincipal() {
                 cout << "No hay ninguna opcion para ese numero";
         }
     } while (opcion != 0);
+}
+void View::mostrarReglas() {
+    int idJuego;
+
+    cout << "Elija el juego para ver sus reglas: " << endl;
+    cout << "1. Mayor a 13." << endl;
+    cout << "2. Dos colores." << endl;
+    cout << "3. Slots" << endl;
+    cout << "4. Piedra, papel o tijera" << endl;
+    cout << "Opcion: ";
+    cin >> idJuego;
+    casino.reglas(idJuego);
 }
 
 void View::mostrarJugador() {

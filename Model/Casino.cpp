@@ -10,7 +10,7 @@ Casino::Casino() {
     // Inicia un jugador en el mapa para comenzar
     jugadoresMap.insert({1, new Jugador(1, "Pedro rodriguez", 500)});
 
-    // Inicia  los juegos disponibles y los agrega al mapa de juegos
+    // Inicia los juegos disponibles y los agrega al mapa de juegos
     // Se puede usar auto pq el tipo de objeto que voy a crear es igual a la variable que estoy inicializando ejm Mayor13
     auto *juego1 = new Mayor13();
     juegosDisponibles.push_back(juego1);
@@ -18,6 +18,8 @@ Casino::Casino() {
     juegosDisponibles.push_back(juego2);
     auto *slots = new Slots();
     juegosDisponibles.push_back(slots);
+    auto *ppt = new PiedraPapelTijera();
+    juegosDisponibles.push_back(ppt);
 }
 
 void Casino::agregarJugador() {
@@ -107,7 +109,7 @@ bool Casino::verPuedeContinuar(int idJugador, float gonzosApostar) {
         throw std::domain_error("El jugador con la identificacion recibida NO existe");
     }
     Jugador *pJugador = jugadoresMap[idJugador];
-    if (pJugador->getCantGonzos() < gonzosApostar) {
+    if (pJugador->getCantGonzos() < 2 * gonzosApostar) {
         return false;
     }
     return true;
@@ -172,4 +174,41 @@ Casino::~Casino() {
         delete juegoTemp;
     }
     cout << "Termine de llamar destructor de casino \n";
+}
+
+void Casino::reglas(int idJuego) {
+    switch (idJuego) {
+        case 1:
+            juegosDisponibles[0]->mostrarReglas();
+            break;
+        case 2:
+            juegosDisponibles[1]->mostrarReglas();
+            break;
+        case 3:
+            juegosDisponibles[2]->mostrarReglas();
+            break;
+        case 4:
+            juegosDisponibles[3]->mostrarReglas();
+            break;
+        default:
+            cout << "Juego inválido. Seleccione entre 1 y " << juegosDisponibles.size() << "." << endl;
+    }
+}
+
+void Casino::mostrarTodosJugadores() const {
+    cout << "=== Jugadores registrados ===\n";
+    for (auto &par : jugadoresMap) {
+        Jugador *j = par.second;
+        cout << "ID: " << j->getId()
+             << " | Nombre: " << j->getNombre()
+             << " | Gonzos: " << j->getCantGonzos() << "\n";
+    }
+}
+
+void Casino::mostrarTodosJuegos() const {
+    cout << "=== Juegos disponibles ===\n";
+    for (size_t i = 0; i < juegosDisponibles.size(); ++i) {
+        cout << (i+1) << ". "
+             << juegosDisponibles[i]->nombreJuego() << "\n";
+    }
 }

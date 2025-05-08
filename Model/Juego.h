@@ -21,7 +21,9 @@ public:
 
     virtual float jugar(float gonzosApostar) = 0;
 
+    virtual void mostrarReglas() const = 0;
 
+    virtual string nombreJuego() const = 0;
 };
 
 #endif //CASINO_JUEGO_H
